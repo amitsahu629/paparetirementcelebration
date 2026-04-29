@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ସ୍ୱାଗତ ସମାରୋହ - ଶ୍ରୀଯୁକ୍ତ ବଳରାମ ସାହୁ</title>
+    
+    <!-- Preload critical images to fix slow loading -->
+    <link rel="preload" as="image" href="img/HighSchool.png">
+    <link rel="preload" as="image" href="img/logo.jpeg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
@@ -41,7 +46,8 @@
                 
                 <div class="mt-6 flex flex-col items-center">
                     <div class="w-40 h-48 md:w-48 md:h-56 rounded-2xl border-4 border-white shadow-xl overflow-hidden bg-gray-200 flex items-center justify-center mb-4">
-                        <img src="img/logo.jpeg" alt="ଶ୍ରୀଯୁକ୍ତ ବଳରାମ ସାହୁ" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://via.placeholder.com/150?text=Image';">
+                        <!-- Added fetchpriority and decoding for faster loading -->
+                        <img src="img/logo.jpeg" alt="ଶ୍ରୀଯୁକ୍ତ ବଳରାମ ସାହୁ" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://via.placeholder.com/150?text=Image';" fetchpriority="high" decoding="async">
                     </div>
                     <h2 class="text-3xl font-bold text-gray-900">ଶ୍ରୀଯୁକ୍ତ ବଳରାମ ସାହୁ</h2>
                     <p class="text-xl text-orange-800 font-bold mt-1">( ହିନ୍ଦୀ ଶିକ୍ଷକ )</p>
